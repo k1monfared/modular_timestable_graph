@@ -1,4 +1,4 @@
-def modular_multiplication_graph(n,c,a=n):
+def modular_multiplication_graph(n,c):
     #n: number of vertices
     #c: multiplier
     #a: mod this number, default is n
@@ -11,7 +11,7 @@ def modular_multiplication_graph(n,c,a=n):
     
     # Adding edges between each i and 2*i mod a
     for i in range(1,n):
-        b = mod(c*i,a)
+        b = mod(c*i,n)
         #ignoring loops
         if i != b:
             D.update({i:[b]})
@@ -21,8 +21,8 @@ def modular_multiplication_graph(n,c,a=n):
     
     return(G)
 
-#Use:
+# Usage:
 @interact
-def _(i=(2..200)):
-    G = modular_multiplication_graph(200,i)
+def _(c=(2..200)):
+    G = modular_multiplication_graph(200,c)
     show(G,vertex_labels=False,  vertex_size=3)
