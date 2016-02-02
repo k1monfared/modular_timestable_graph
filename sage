@@ -21,8 +21,8 @@ def modular_multiplication_graph(n,c):
     
     return(G)
 
-# Usage:
+#Use:
 @interact
-def _(c=(2..200)):
-    G = modular_multiplication_graph(200,c)
-    show(G,vertex_labels=False,  vertex_size=3)
+def _(n=(20..200), c=(2..200)):
+    G = modular_multiplication_graph(n,c)
+    G.show(vertex_labels=False,  vertex_size=3, edge_color='grey', edge_style='solid')
