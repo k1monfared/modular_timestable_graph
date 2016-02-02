@@ -9,7 +9,7 @@ def modular_multiplication_graph(n,c):
     # The dictionary that defines the vertices 
     D = {}
     
-    # Adding edges between each i and 2*i mod a
+    # Adding edges between each i and c*i mod n
     for i in range(1,n):
         b = mod(c*i,n)
         #ignoring loops
