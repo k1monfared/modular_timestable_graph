@@ -23,6 +23,6 @@ def modular_multiplication_graph(n,c):
 
 #Use:
 @interact
-def _(n=(20..200), c=(2..200)):
+def _(n=(2..200), c=(2..200)):
     G = modular_multiplication_graph(n,c)
     G.show(vertex_labels=False,  vertex_size=3, edge_color='grey', edge_style='solid')
