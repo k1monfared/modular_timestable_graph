@@ -23,7 +23,7 @@ def modular_multiplication_graph(n,c):
 
 #Use:
 n = 200
-for c in range(200):
+for c in range(n):
     G = modular_multiplication_graph(n,c)
     p = G.plot(vertex_labels=False, vertex_size=3, edge_color='grey', edge_style='solid', title= 'c = ' + str(c))
     p.save('modular_times_graph_' + str(n) + '_nodes_' + str(c)+ '_multplier.png')
