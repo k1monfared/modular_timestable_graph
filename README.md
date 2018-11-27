@@ -202,3 +202,9 @@ Here are some results for n =200:
 <img src=modular_times_graph_200_nodes_197_multplier.png width="300">
 <img src=modular_times_graph_200_nodes_198_multplier.png width="300">
 <img src=modular_times_graph_200_nodes_199_multplier.png width="300">
+
+While I was saving images for this preview, I used this to generate 200 lines of code to display all the images in the md file:
+
+    n = 200
+    for c in range(n):
+        print('<img src=modular_times_graph_' + str(n) + '_nodes_' + str(c)+ '_multplier.png width="300">')
