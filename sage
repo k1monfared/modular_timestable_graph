@@ -22,7 +22,8 @@ def modular_multiplication_graph(n,c):
     return(G)
 
 #Use:
-@interact
-def _(n=(2..200), c=(2..200)):
+n = 200
+for c in range(200):
     G = modular_multiplication_graph(n,c)
-    G.show(vertex_labels=False,  vertex_size=3, edge_color='grey', edge_style='solid')
+    p = G.plot(vertex_labels=False, vertex_size=3, edge_color='grey', edge_style='solid', title= 'c = ' + str(c))
+    p.save('modular_times_graph_' + str(n) + '_nodes_' + str(c)+ '_multplier.png')
